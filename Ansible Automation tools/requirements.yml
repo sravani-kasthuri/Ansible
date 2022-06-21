@@ -1,0 +1,5 @@
+---
+- name: Install atom tool
+  hosts: localhost
+  roles:
+  - atom-role

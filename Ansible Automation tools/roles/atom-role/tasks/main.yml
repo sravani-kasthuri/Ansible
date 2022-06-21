@@ -1,0 +1,17 @@
+---
+# tasks file for atom-role
+- name: install atom
+  become: yes
+  apt:
+    name: atom
+    state: present
+  when: ansible_distribution == 'Ubuntu' 
+
+- name: install atom
+  become: yes
+  yum:
+    name: atom
+    state: present
+  when: ansible_distribution == 'RedHat' or ansible_distribution == 'CentOS'
+
+
